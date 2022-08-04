@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace DesafioUber
 {
-    public class Veiculo
+    public static class Veiculo
     {
-        public string Cor { get; set; }
-        public string Placa { get; set; }
-        public string Modelo { get; set; }
+        // Propriedades estaticas do tipo string que tem um valor definido
+        public static string Cor { get { return "Vermelho"; } }
+        public static string Placa { get { return "FLF55E0"; } }
+        public static string Modelo { get { return "New Fiesta"; } }
+
+        // Método para mostrar dados do veiculo
+        public static void MostrarDadosVeiculo()
+        {
+            Console.WriteLine($"Modelo: {Modelo}");
+            Console.WriteLine($"Cor: {Cor}");
+            Console.WriteLine($"Placa: {Placa}");
+        }
     }
 }

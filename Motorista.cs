@@ -9,17 +9,45 @@ namespace DesafioUber
     // Motorista recebe como herança as propriedades de usuário
     public class Motorista : Usuario
     {
-        public Veiculo Veiculo { get; set; }
-        public bool AceitarCorrida(bool aceita)
+        // Método do tipo booleana para aceitar a corrida
+        public bool AceitarCorrida()
         {
-            return aceita;
+            // Limpa as mensagens do console
+            Console.Clear();
+            // Pergunta se o motorista quer aceitar a corrida
+            Console.WriteLine("\r\nMotorista, aceita corrida? (s/n) ");
+
+            // cria o tipo booleano e define como falso
+            bool aceitaCorrida = false;
+            // Estrutura de condição que define S para verdadeiro(aceita corrida) e N para falso(não aceita corrida)
+            switch (Console.ReadLine())
+            {
+                case "s":
+                    aceitaCorrida = true;
+                    break;
+                case "n":
+                    aceitaCorrida = false;
+                    break;
+            }
+            // Se aceita corrida for verdadeiro aparece a mensagem:
+            if (aceitaCorrida)
+            {
+                Console.WriteLine("\r\nCorrida aceita! ");
+                Thread.Sleep(2000);
+                return true;
+            }
+            // Se aceita corrida for falso aparece a mensagem:
+            Console.WriteLine("\r\nCorrida negada! ");
+            // Para a execução em um período de tempo especificado
+            Thread.Sleep(2000);
+            return false;
         }
 
+        // Método para finalizar a corrida
         public void FinalizarCorrida()
         {
-            Console.WriteLine("Corrida finalizada com sucesso!");
+            Console.WriteLine("\r\nCorrida finalizada!");
         }
-
 
     }
 }

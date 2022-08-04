@@ -8,8 +8,7 @@ namespace DesafioUber
 {
     public class Corrida
     {
-        public float Valor { get; set; }
-
-       
+        // Propriedade statica do tipo float com um valor pré definido para retorno
+        public static float Valor { get { return 24.60f; } }
     }
 }

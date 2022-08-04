@@ -95,7 +95,7 @@ namespace DesafioUber
         // Método para pagar a corrida
         public void PagarCorrida()
         {
-            Console.WriteLine("Pagamento realizado.");
+            Console.WriteLine("\r\nPagamento realizado.");
         }
 
         // Método para cancelar a corrida
