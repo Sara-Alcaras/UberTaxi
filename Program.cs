@@ -1,18 +1,29 @@
 ﻿namespace DesafioUber
 {
-    class Program 
+    class Program
     {
         static void Main(string[] args)
         {
-            Passageiro passageiro = new Passageiro();
+            // Inicializa a classe passageiro
+            Passageiro passageiro = new();
 
-            passageiro.Name = "o nome do passageiro é Sara";
+            // Inicializa a classe motorista
+            Motorista motorista = new();
+
+            Console.WriteLine("Nome e telefone do passageiro:");
+            passageiro.Name = "\r\nSara";
             Console.WriteLine(passageiro.Name);
 
-            passageiro.Telefone = "o telefone do passageiro é 40028922";
+            passageiro.Telefone = "40028922";
             Console.WriteLine(passageiro.Telefone);
 
-            Console.WriteLine(passageiro.PagarCorrida());
+            passageiro.InformarEnderecoOrigem();
+
+            passageiro.InformarEnderecoDestino();
+
+            passageiro.SelecionarTipoPagamento();
+
+
         }
     }
 

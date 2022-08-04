@@ -17,7 +17,7 @@ namespace DesafioUber
 
         public void FinalizarCorrida()
         {
-            
+            Console.WriteLine("Corrida finalizada com sucesso!");
         }
 
 
